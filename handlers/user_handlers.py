@@ -337,7 +337,7 @@ async def process_target_sent(callback: CallbackQuery, state: FSMContext):
 
 
 # Этот хэндлер будет срабатывать на любые сообщения в состоянии "по умолчанию",
-# кроме тех, для которых есть отдельные хэндлеры
+# кроме тех, для которых есть отдельные хэндлеры!
 @router.message(StateFilter(default_state))
 async def send_echo(message: Message):
     await message.delete()
