@@ -91,7 +91,7 @@ async def apply_button_press(callback: CallbackQuery, state: FSMContext):
 @router.callback_query(F.data.in_(['faq_button1']))
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
-    await callback.message.edit_text(text='-Есть ли индивидуальные занятия?\n\n-Нет. Для наиболее эффективного '
+    await callback.message.edit_text(text='- Есть ли индивидуальные занятия?\n\n- Нет. Для наиболее эффективного '
                                           ' процесса изучения языка мы придерживаемся группового формата, тк это '
                                           ' дает ряд колоссальных преимуществ (преодоление языкового барьера; '
                                           ' мотивация; сотрудничество; разнообразие; новые знакомства; '
@@ -102,14 +102,14 @@ async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
 @router.callback_query(F.data.in_(['faq_button2']))
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
-    await callback.message.edit_text(text='-Есть ли подготовка к ОГЭ/ ЕГЭ?\n\n-Да, есть. Подготовка '
+    await callback.message.edit_text(text='- Есть ли подготовка к ОГЭ/ ЕГЭ?\n\n- Да, есть. Подготовка '
                                           'осуществляется в мини группах (2-4 чел).', reply_markup=back_keyboard)
 
 
 @router.callback_query(F.data.in_(['faq_button3']))
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
-    await callback.message.edit_text(text='-Когда происходит набор в группы?\n\n-В мае- августе. Но! Если '
+    await callback.message.edit_text(text='- Когда происходит набор в группы?\n\n- В мае- августе. Но! Если '
                                           'появляется место, мы связываемся с потенциальными учениками  из листа '
                                           'ожидания в течение года.', reply_markup=back_keyboard)
 
@@ -117,7 +117,7 @@ async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
 @router.callback_query(F.data.in_(['faq_button4']))
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
-    await callback.message.edit_text(text='-Как записаться на занятия?\n\n-Заполнить анкету, оставив свои данные. '
+    await callback.message.edit_text(text='- Как записаться на занятия?\n\n- Заполнить анкету, оставив свои данные. '
                                           'С вами свяжутся и пригласят на собеседование для определения уровня.',
                                      reply_markup=back_keyboard)
 
@@ -125,7 +125,7 @@ async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
 @router.callback_query(F.data.in_(['faq_button5']))
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
-    await callback.message.edit_text(text='-Кто преподаватель?\n\n-Юлия Смирнова (руководитель школы), преподаватель, '
+    await callback.message.edit_text(text='- Кто преподаватель?\n\n- Юлия Смирнова (руководитель школы), преподаватель, '
                                           'лингвист, методист, сертифицирована Кембриджем, 15 лет в преподавании.',
                                      reply_markup=back_keyboard)
 
@@ -133,7 +133,7 @@ async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
 @router.callback_query(F.data.in_(['faq_button6']))
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
-    await callback.message.edit_text(text='-Сколько стоит обучение?\n\n-Обучение оплачивается авансом за месяц (от 8 '
+    await callback.message.edit_text(text='- Сколько стоит обучение?\n\n- Обучение оплачивается авансом за месяц (от 8 '
                                           'до 10 занятий в месяц; занятия два раза в неделю). Оплачивать следует 1 '
                                           'числа каждого месяца. Стоимость одного занятия (60мин.):\n* школьники - '
                                           '1000р.\n* подготовка к ЕГЭ/ОГЭ - 1800р.\n* разговорный клуб - 1500р.',
@@ -143,7 +143,7 @@ async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
 @router.callback_query(F.data.in_(['faq_button7']))
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
-    await callback.message.edit_text(text='-Сколько человек в группе?\n\n-От 4 до 8 человек (школьники); от 2-4 '
+    await callback.message.edit_text(text='- Сколько человек в группе?\n\n- От 4 до 8 человек (школьники); от 2-4 '
                                           'человек - ОГЭ/ЕГЭ; 2-6 человек - разговорный клуб.',
                                      reply_markup=back_keyboard)
 
@@ -151,7 +151,7 @@ async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
 @router.callback_query(F.data.in_(['faq_button8']))
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
-    await callback.message.edit_text(text='-Сколько длится обучение?\n\n-Обучение длится 9,5 месяцев (1 сентября - 15 '
+    await callback.message.edit_text(text='- Сколько длится обучение?\n\n- Обучение длится 9,5 месяцев (1 сентября - 15 '
                                           'июня). Предполагаются зимние каникулы(10 дней).',
                                      reply_markup=back_keyboard)
 
@@ -159,7 +159,7 @@ async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
 @router.callback_query(F.data.in_(['faq_button9']))
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
-    await callback.message.edit_text(text='-Можно ли получить чек об оплате образовательных услуг?\n\n-Да, для этого '
+    await callback.message.edit_text(text='- Можно ли получить чек об оплате образовательных услуг?\n\n- Да, для этого '
                                           'составляется и подписывается договор с двух сторон. Чек Вы получаете '
                                           'ежемесячно в электронном виде.', reply_markup=back_keyboard)
 
@@ -167,7 +167,7 @@ async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
 @router.callback_query(F.data.in_(['faq_button10']))
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
-    await callback.message.edit_text(text='-Есть ли домашние задания?\n\n-Да, домашнее задание является неотъемлемой '
+    await callback.message.edit_text(text='- Есть ли домашние задания?\n\n- Да, домашнее задание является неотъемлемой '
                                           'частью обучения и служит цели закрепления изученного материала.',
                                      reply_markup=back_keyboard)
 
@@ -175,7 +175,7 @@ async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
 @router.callback_query(F.data.in_(['faq_button11']))
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
-    await callback.message.edit_text(text='-Где и как проходят занятия?\n\n-Занимаемся на платформе zoom, на доске '
+    await callback.message.edit_text(text='- Где и как проходят занятия?\n\n- Занимаемся на платформе zoom, на доске '
                                           'MIRO. Занятие длится 60 минут. После занятия высылается домашнее задание; '
                                           'весь изученный материал на уроке остается у студентов.',
                                      reply_markup=back_keyboard)
@@ -184,14 +184,14 @@ async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
 @router.callback_query(F.data.in_(['faq_button12']))
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
-    await callback.message.edit_text(text='-Нужно ли покупать учебники?\n\n-Учебные материалы покупать не нужно. ',
+    await callback.message.edit_text(text='- Нужно ли покупать учебники?\n\n- Учебные материалы покупать не нужно. ',
                                      reply_markup=back_keyboard)
 
 
 @router.callback_query(F.data.in_(['faq_button13']))
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
-    await callback.message.edit_text(text='-Как платить, если пропустил занятие?\n\n-В случае пропуска урока ученику '
+    await callback.message.edit_text(text='- Как платить, если пропустил занятие?\n\n- В случае пропуска урока ученику '
                                           'высылается запись занятия для самостоятельного изучения. Оплата при этом '
                                           'не возвращается.', reply_markup=back_keyboard)
 
