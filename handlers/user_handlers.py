@@ -152,13 +152,14 @@ async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
     await callback.message.edit_text(text='-Сколько длится обучение?\n\n-Обучение длится 9,5 месяцев (1 сентября - 15 '
-                                          'июня).', reply_markup=back_keyboard)
+                                          'июня). Предполагаются зимние каникулы(10 дней).',
+                                     reply_markup=back_keyboard)
 
 
 @router.callback_query(F.data.in_(['faq_button9']))
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
-    await callback.message.edit_text(text='-Можно ли получить чек об оплате о рашовательных услуг?\n\n-Да, для этого '
+    await callback.message.edit_text(text='-Можно ли получить чек об оплате образовательных услуг?\n\n-Да, для этого '
                                           'составляется и подписывается договор с двух сторон. Чек Вы получаете '
                                           'ежемесячно в электронном виде.', reply_markup=back_keyboard)
 
@@ -167,7 +168,7 @@ async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
     await callback.message.edit_text(text='-Есть ли домашние задания?\n\n-Да, домашнее задание является неотъемлемой '
-                                          'частью обучения и служат цели закрепления изученного материала.',
+                                          'частью обучения и служит цели закрепления изученного материала.',
                                      reply_markup=back_keyboard)
 
 
@@ -175,7 +176,7 @@ async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
     await callback.message.edit_text(text='-Где и как проходят занятия?\n\n-Занимаемся на платформе zoom, на доске '
-                                          'miro. Занятие длится 60 минут. После занятия высылается домашнее задание; '
+                                          'MIRO. Занятие длится 60 минут. После занятия высылается домашнее задание; '
                                           'весь изученный материал на уроке остается у студентов.',
                                      reply_markup=back_keyboard)
 
