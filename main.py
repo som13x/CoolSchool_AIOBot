@@ -15,4 +15,4 @@ async def main() -> None:
     await dp.start_polling(bot)
 
 
-asyncio.run(main())
+gitasyncio.run(main())

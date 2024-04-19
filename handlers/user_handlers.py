@@ -60,7 +60,7 @@ async def check_button_press(callback: CallbackQuery, state: FSMContext):
     else:
         get_user_request(callback.from_user.id)
         await callback.message.answer(text='Вы еще не заполняли анкету. Чтобы приступить - '
-                                           "нажмите кнопку <✅Подать заявку>")
+                                           "нажмите кнопку <✅Подать заявку>", reply_markup=main_keyboard)
 
 
 # Этот хэндлер срабатывает на кнопку /apply
