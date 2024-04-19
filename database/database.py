@@ -9,6 +9,7 @@ async def db_connect():
         cursor.execute(table_creation)
 
 
+# Сохранение заявок от пользователей в базе данных
 async def save_user_request(sql_data: [int, dict[str, str | int | bool]]):
     records: list = [None]
 
