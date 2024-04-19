@@ -11,7 +11,12 @@ async def db_connect():
 
 # Сохранение заявок от пользователей в базе данных
 async def save_user_request(sql_data: [int, dict[str, str | int | bool]]):
-    records: list = [None]
+    records: list = []
+
+    i = len(records)
+    n = 0
+    for i in range(i):
+        records.pop(n)
 
     insert_query = (f'INSERT INTO user_requests(user_id, name, lang_level, age, learn_target, telephone, time_prior) '
                     f'VALUES (?, ?, ?, ?, ?, ?, ?)')
