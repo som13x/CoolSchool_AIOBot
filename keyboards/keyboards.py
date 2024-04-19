@@ -19,62 +19,62 @@ cancel_button = InlineKeyboardButton(
 
 level_button1 = InlineKeyboardButton(
     text=LEXICON_RU['level_button1'],
-    callback_data='beginner'
+    callback_data='Начинающий A1-A2'
 )
 
 level_button2 = InlineKeyboardButton(
     text=LEXICON_RU['level_button2'],
-    callback_data='intermediate'
+    callback_data='Средний B1-B2'
 )
 
 level_button3 = InlineKeyboardButton(
     text=LEXICON_RU['level_button3'],
-    callback_data='advanced'
+    callback_data='Продвинутый C1'
 )
 
 level_button4 = InlineKeyboardButton(
     text=LEXICON_RU['level_button4'],
-    callback_data='dont know'
+    callback_data='Не знаю'
 )
 
 level_button5 = InlineKeyboardButton(
     text=LEXICON_RU['level_button5'],
-    callback_data='own answer'
+    callback_data='Свой ответ'
 )
 
 target_button1 = InlineKeyboardButton(
     text=LEXICON_RU['target_button1'],
-    callback_data='for work'
+    callback_data='Для работы'
 )
 
 target_button2 = InlineKeyboardButton(
     text=LEXICON_RU['target_button2'],
-    callback_data='for exam prep'
+    callback_data='Для сдачи ЕГЭ/ОГЭ'
 )
 
 target_button3 = InlineKeyboardButton(
     text=LEXICON_RU['target_button3'],
-    callback_data='for school'
+    callback_data='Для улучшения результатов в школе'
 )
 
 target_button4 = InlineKeyboardButton(
     text=LEXICON_RU['target_button4'],
-    callback_data='for self development'
+    callback_data='Для саморазвития'
 )
 
 time_button1 = InlineKeyboardButton(
     text=LEXICON_RU['time_button1'],
-    callback_data='in the morning'
+    callback_data='Утром'
 )
 
 time_button2 = InlineKeyboardButton(
     text=LEXICON_RU['time_button2'],
-    callback_data='in the afternoon'
+    callback_data='Днем'
 )
 
 time_button3 = InlineKeyboardButton(
     text=LEXICON_RU['time_button3'],
-    callback_data='in the evening'
+    callback_data='Вечером'
 )
 
 check_my_request = InlineKeyboardButton(

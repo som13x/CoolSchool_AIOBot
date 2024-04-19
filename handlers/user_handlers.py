@@ -76,7 +76,7 @@ async def apply_button_press(callback: CallbackQuery, state: FSMContext):
         await callback.message.delete_reply_markup()
         await callback.message.delete()
         await callback.message.answer(
-            text='Вы уже заполнили заявку!\n\nВы можете посмотреть свою заявку нажав кнопку в главном меню '
+            text='Вы уже заполнили заявку!\n\nВы можете посмотреть свою заявку, нажав кнопку в главном меню '
                  '<👀Посмотреть мою заявку> 👇',
             reply_markup=main_keyboard)
 
@@ -119,7 +119,7 @@ async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
 async def faq_answer_sent(callback: CallbackQuery, state: FSMContext):
     await callback.message.delete_reply_markup()
     await callback.message.edit_text(text='- Как записаться на занятия?\n\n- Заполнить анкету, оставив свои данные. '
-                                          'С вами свяжутся и пригласят на собеседование для определения уровня.',
+                                          'С Вами свяжутся и пригласят на собеседование для определения уровня.',
                                      reply_markup=back_keyboard)
 
 
@@ -227,7 +227,7 @@ async def warning_not_name(message: Message):
 # Этот хэндлер будет срабатывать, если введен уровень английского языка
 # и переводить в состояние ввода возраста
 @router.callback_query(StateFilter(UserInformation.language_level), F.data.in_(
-    ['beginner', 'intermediate', 'advanced', 'dont know']))
+    ['Начинающий A1-A2', 'Средний B1-B2', 'Продвинутый C1', 'Не знаю']))
 async def process_level_sent1(callback: CallbackQuery, state: FSMContext):
     # Cохраняем уровень английского в хранилище по ключу "level"
     await state.update_data(level=callback.data)
@@ -239,7 +239,7 @@ async def process_level_sent1(callback: CallbackQuery, state: FSMContext):
     await state.set_state(UserInformation.age)
 
 
-@router.callback_query(F.data.in_('own answer'))
+@router.callback_query(F.data.in_('Свой ответ'))
 async def process_level_sent2(callback: CallbackQuery, state: FSMContext):
     # Cохраняем уровень английского в хранилище по ключу "level"
     await callback.message.edit_text(text='Введите свой вариант ответа о уровне английского языка:',
@@ -278,7 +278,7 @@ async def warning_not_age(message: Message):
 # Этот хэндлер будет срабатывать, если введена цель изучения английского языка
 # и переводить в состояние ввода номера телефона
 @router.callback_query(StateFilter(UserInformation.learn_target), F.data.in_(
-    ['for work', 'for exam prep', 'for school', 'for self development']))
+    ['Для работы', 'Для сдачи ЕГЭ/ОГЭ', 'Для улучшения результатов в школе', 'Для саморазвития']))
 async def process_target_sent(callback: CallbackQuery, state: FSMContext):
     # Cохраняем уровень английского в хранилище по ключу "target"
     await state.update_data(target=callback.data)
@@ -315,7 +315,7 @@ async def warning_not_telephone(message: Message):
 # Этот хэндлер будет срабатывать, если выбран промежуток времени для проведения занятия
 # и переходить к сохранению заполненной анкеты
 @router.callback_query(StateFilter(UserInformation.time_priority),
-                       F.data.in_(['in the morning', 'in the afternoon', 'in the evening']))
+                       F.data.in_(['Утром', 'Днем', 'Вечером']))
 async def process_target_sent(callback: CallbackQuery, state: FSMContext):
     # Cохраняем уровень английского в хранилище по ключу "time"
     await state.update_data(time=callback.data)
@@ -346,4 +346,3 @@ async def process_target_sent(callback: CallbackQuery, state: FSMContext):
 @router.message(StateFilter(default_state))
 async def send_echo(message: Message):
     await message.delete()
-
