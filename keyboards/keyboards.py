@@ -82,6 +82,76 @@ check_my_request = InlineKeyboardButton(
     callback_data='check request'
 )
 
+faq_button1 = InlineKeyboardButton(
+    text=LEXICON_RU['faq_button1'],
+    callback_data='faq_button1'
+)
+
+faq_button2 = InlineKeyboardButton(
+    text=LEXICON_RU['faq_button2'],
+    callback_data='faq_button2'
+)
+
+faq_button3 = InlineKeyboardButton(
+    text=LEXICON_RU['faq_button3'],
+    callback_data='faq_button3'
+)
+
+faq_button4 = InlineKeyboardButton(
+    text=LEXICON_RU['faq_button4'],
+    callback_data='faq_button4'
+)
+
+faq_button5 = InlineKeyboardButton(
+    text=LEXICON_RU['faq_button5'],
+    callback_data='faq_button5'
+)
+
+faq_button6 = InlineKeyboardButton(
+    text=LEXICON_RU['faq_button6'],
+    callback_data='faq_button6'
+)
+
+faq_button7 = InlineKeyboardButton(
+    text=LEXICON_RU['faq_button7'],
+    callback_data='faq_button7'
+)
+
+faq_button8 = InlineKeyboardButton(
+    text=LEXICON_RU['faq_button8'],
+    callback_data='faq_button8'
+)
+
+faq_button9 = InlineKeyboardButton(
+    text=LEXICON_RU['faq_button9'],
+    callback_data='faq_button9'
+)
+
+faq_button10 = InlineKeyboardButton(
+    text=LEXICON_RU['faq_button10'],
+    callback_data='faq_button10'
+)
+
+faq_button11 = InlineKeyboardButton(
+    text=LEXICON_RU['faq_button11'],
+    callback_data='faq_button11'
+)
+
+faq_button12 = InlineKeyboardButton(
+    text=LEXICON_RU['faq_button12'],
+    callback_data='faq_button12'
+)
+
+faq_button13 = InlineKeyboardButton(
+    text=LEXICON_RU['faq_button13'],
+    callback_data='faq_button13'
+)
+
+back_button = InlineKeyboardButton(
+    text=LEXICON_RU['back_button'],
+    callback_data='back_button_pressed'
+)
+
 main_keyboard = InlineKeyboardMarkup(
     inline_keyboard=[[apply_button],
                      [check_my_request],
@@ -89,6 +159,10 @@ main_keyboard = InlineKeyboardMarkup(
 
 cancel_keyboard = InlineKeyboardMarkup(
     inline_keyboard=[[cancel_button]]
+)
+
+back_keyboard = InlineKeyboardMarkup(
+    inline_keyboard=[[back_button]]
 )
 
 level_keyboard = InlineKeyboardMarkup(
@@ -110,4 +184,20 @@ time_keyboard = InlineKeyboardMarkup(
     inline_keyboard=[[time_button1],
                      [time_button2],
                      [time_button3],
+                     [cancel_button]])
+
+faq_keyboard = InlineKeyboardMarkup(
+    inline_keyboard=[[faq_button1],
+                     [faq_button2],
+                     [faq_button3],
+                     [faq_button4],
+                     [faq_button5],
+                     [faq_button6],
+                     [faq_button7],
+                     [faq_button8],
+                     [faq_button9],
+                     [faq_button10],
+                     [faq_button11],
+                     [faq_button12],
+                     [faq_button13],
                      [cancel_button]])
