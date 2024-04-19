@@ -69,6 +69,7 @@ async def check_button_press(callback: CallbackQuery, state: FSMContext):
 @router.callback_query(F.data.in_(['apply_button_pressed']))
 async def apply_button_press(callback: CallbackQuery, state: FSMContext):
     if get_user_request(callback.from_user.id) is None:
+        await state.clear()
         await callback.message.edit_text(text='Пожалуйста, введите ваше имя:', reply_markup=cancel_keyboard)
         await state.set_state(UserInformation.name)
     else:
