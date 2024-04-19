@@ -59,6 +59,7 @@ async def check_button_press(callback: CallbackQuery, state: FSMContext):
     # Если анкеты пользователя в базе нет - предлагаем заполнить
     else:
         get_user_request(callback.from_user.id)
+        await callback.message.delete_reply_markup()
         await callback.message.answer(text='Вы еще не заполняли анкету. Чтобы приступить - '
                                            "нажмите кнопку <✅Подать заявку>", reply_markup=main_keyboard)
 
