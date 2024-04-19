@@ -11,6 +11,7 @@ async def db_connect():
 
 async def save_user_request(sql_data: [int, dict[str, str | int | bool]]):
     records: list = []
+    records_tuple: tuple = ()
     insert_query = (f'INSERT INTO user_requests(user_id, name, lang_level, age, learn_target, telephone, time_prior) '
                     f'VALUES (?, ?, ?, ?, ?, ?, ?)')
 
@@ -20,9 +21,11 @@ async def save_user_request(sql_data: [int, dict[str, str | int | bool]]):
         for key2 in sql_data[user_id]:
             records.append(sql_data[user_id][key2])
 
+    records_tuple = tuple(records)
+
     with sqlite3.connect("users.db") as connection:
         cursor = connection.cursor()
-        cursor.execute(insert_query, tuple(records))
+        cursor.execute(insert_query, records_tuple)
 
 
 def get_user_request(user_id):
