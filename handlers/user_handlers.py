@@ -5,7 +5,7 @@ from aiogram.filters import Command, CommandStart, StateFilter
 from aiogram.fsm.context import FSMContext
 from aiogram.types import CallbackQuery
 from aiogram.types import Message
-
+from aiogram.fsm.state import default_state, State, StatesGroup
 from database.database import db_connect, save_user_request, get_user_request
 from keyboards.keyboards import main_keyboard, cancel_keyboard, level_keyboard, target_keyboard, time_keyboard
 from keyboards.keyboards import faq_keyboard, back_keyboard
@@ -334,3 +334,11 @@ async def process_target_sent(callback: CallbackQuery, state: FSMContext):
                                 f"Удобное время для занятий: {user_dict[callback.from_user.id]['time']}",
                            chat_id=1726588078
                            )
+
+
+# Этот хэндлер будет срабатывать на любые сообщения в состоянии "по умолчанию",
+# кроме тех, для которых есть отдельные хэндлеры
+@router.message(StateFilter(default_state))
+async def send_echo(message: Message):
+    await message.delete()
+
