@@ -1,9 +1,10 @@
 from dataclasses import dataclass
 from environs import Env
 
+
 @dataclass
 class TgBot:
-    token: str            # Токен для доступа к телеграм-боту
+    token: str  # Токен для доступа к телеграм-боту
     admin_ids: list[int]  # Список id администраторов бота
 
 
@@ -11,8 +12,8 @@ class TgBot:
 class Config:
     tg_bot: TgBot
 
-def load_config(path: str | None = None) -> Config:
 
+def load_config(path: str | None = None) -> Config:
     env: Env = Env()
     env.read_env(path)
 
