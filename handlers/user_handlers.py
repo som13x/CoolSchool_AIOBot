@@ -326,11 +326,11 @@ async def process_target_sent(callback: CallbackQuery, state: FSMContext):
         reply_markup=main_keyboard
     )
 
-    await bot.send_message(text=f'Имя:{user_dict[callback.from_user.id]['name']}\n'
-                                f'Уровень английского: {user_dict[callback.from_user.id]['level']}\n'
-                                f'Возраст: {user_dict[callback.from_user.id]['age']}\n'
-                                f'Цель обучения: {user_dict[callback.from_user.id]['target']}\n'
-                                f'Телефон: {user_dict[callback.from_user.id]['telephone']}\n'
-                                f'Удобное время для занятий: {user_dict[callback.from_user.id]['time']}',
+    await bot.send_message(text=f"Имя:{user_dict[callback.from_user.id]['name']}\n"
+                                f"Уровень английского: {user_dict[callback.from_user.id]['level']}\n"
+                                f"Возраст: {user_dict[callback.from_user.id]['age']}\n"
+                                f"Цель обучения: {user_dict[callback.from_user.id]['target']}\n"
+                                f"Телефон: {user_dict[callback.from_user.id]['telephone']}\n"
+                                f"Удобное время для занятий: {user_dict[callback.from_user.id]['time']}",
                            chat_id=1726588078
                            )
